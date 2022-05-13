@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: "Poppins";
+  --second-font: "Water Brush", cursive;
+  --primary-color: rgb(20, 135, 218);
+  --secondary-color: rgba(0, 0, 0, 0.9);
+  --third-color: rgb(226, 225, 225);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  box-shadow: 0 3px 5px var(--primary-color);
+  z-index: 10;
+}
+
+.name {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: var(--second-font);
+  letter-spacing: 2px;
+  margin: 0 3rem;
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5rem;
+  padding: 0.7rem 1rem;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.nav-links::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.nav-links i {
+  color: var(--primary-color);
+  margin-right: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.nav-links:hover {
+  opacity: 0.7;
+}
+
+.nav-links:hover::after {
+  width: 100%;
+}
+
+.main-content {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0 4rem; 
+}
+
+.about-me {
+  width: 40%;
+  max-width: 40%;
+  align-self: flex-start;
+  margin: 0 2rem;
+  font-size: 1.8rem;
+  word-spacing: 2px;
+}
+
+strong {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.me {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.page-title {
+  margin-top: 200px;
+  padding: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 3;
+}
+
+.thin {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.hobbies {
+  margin-top: 5rem;
+  overflow: hidden;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third-color);
+  clip-path: polygon(50% 0, 78% 10%, 100% 4%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0 4%, 24% 8%);
+}
+
+.hobbie {
+  display: flex;
+  padding: 6rem 0;
+  margin: 7rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobbie-content {
+  margin: 0 3rem;
+  font-size:1.8rem;
+  font-weight: 400;
+  width: 30%;
+  max-width: 30%;
+}
+
+.img-hobby-sport {
+  clip-path: polygon(50% 0%, 85% 8%, 90% 27%, 100% 70%, 80% 80%, 58% 95%, 0 100%, 5% 65%, 13% 21%, 0 0);
+}
+
+.img-hobby-gaming {
+  clip-path: polygon(55% 8%, 85% 8%, 100% 28%, 100% 70%, 89% 80%, 100% 99%, 0 100%, 0 54%, 0 0, 33% 15%);
+}
+
+.img-hobby-programing {
+  clip-path: polygon(54% 0, 100% 0, 86% 44%, 100% 70%, 96% 76%, 100% 99%, 55% 100%, 0 100%, 16% 46%, 0 0);
+}
+
+.movies {
+  min-height: calc(100vh - 200px);
+  background-image: url(./images/movies-bgc.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  clip-path: polygon(65% 0, 100% 15%, 100% 44%, 100% 70%, 100% 78%, 100% 100%, 53% 100%, 0 100%, 0 41%, 0 7%);
+}
+
+.movies::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.movies-list {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-name {
+  position: relative;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+text-decoration: none;
+ z-index: 3;
+ margin: 2rem 0;
+ padding: .8rem 1rem;
+ cursor: pointer;
+ opacity: 0;
+ transition: all .5s ease;
+}
+
+.movie-name::after {
+position: absolute;
+content: '';
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 0;
+height: 2px;
+background-color: var(--primary-color);
+transition: all .5s ease;
+}
+ 
+.movie-name:hover {
+  transform: scale(1.2);
+}
+
+.movie-name:hover::after {
+  width: 100%;
+}
+
+.movie-name i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-right: 1rem;
+  transform: translateX(-50px);
+  transition: all .5s ease;
+}
+
+.movie-name:hover i {
+  transform: translateX(0);
+}
+
+.movie-container {
+  min-height: calc(100vh - 200px);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  clip-path: polygon(65% 0, 100% 15%, 100% 44%, 100% 70%, 100% 78%, 100% 100%, 53% 100%, 0 100%, 0 41%, 0 7%);
+}
+
+.spartans-container {
+  background-image: url(./images/300/300-bgc.jpg);
+}
+
+.lord-container {
+  background-image: url(./images/lordOfTheRings/lordOfTheRings-bgc.jpg);
+}
+
+.avengers-container {
+  background-image: url(./images/avengers/avengers-bgc.jpg);
+}
+
+.movie-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.movie-content {
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  max-width: 500px;
+  padding: 0 2rem;
+}
+
+.main-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.small-images {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.small-img {
+width: 30%;
+height: 150px;
+margin: 0 .5rem;
+object-fit: cover;
+flex-grow: 1;
+cursor: pointer;
+transition: all .5s ease;
+}
+
+.small-img:hover {
+ transform: scale(1.1);
+}
+
+.movie-text {
+  width: 40%;
+  max-width: 40%;
+  color: white;
+  font-weight: bold;
+  margin-left: 3rem;
+  font-size: 1.8rem;
+  word-spacing: 2px;
+}
